@@ -17,7 +17,7 @@ document.addEventListener("keydown", (e) =>{
     playTune(e.key);
 });
 
-const clickedKey = document.querySelector(`[data-key="${key}"]`);
+const clickedKey = document.querySelectorAll(`[data-key="${key}"]`);
 clickedKey.classList.add("active");
 setTimeout(()=>{
     clickedKey.classList.remove("active");
