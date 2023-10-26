@@ -25,20 +25,8 @@ document.addEventListener("keydown", (e) =>{
   }
 });
 
-const clickedKey = document.querySelector(`[data-key="${key}"]`);
+const clickedKey = document.querySelectorAll(`[data-key="${key}"]`);
 clickedKey.classList.add("active");
 setTimeout(()=>{
     clickedKey.classList.remove("active");
 },150);
-
-const showHideKeys = () => {
-    pianoKeys.forEach(key => key.classList.toggle("hide"))
-};
-
-const handleVolume = (e) => {
-    audio.volume = e.target.value;
-};
-
-volumeSlider.addEventListener("input", handleVolume);
-
-keysCheck.addEventListener("click", showHideKeys);
